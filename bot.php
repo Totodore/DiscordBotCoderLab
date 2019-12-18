@@ -13,7 +13,7 @@ if (!isset($_GET["start"])) {
 
 $helping = json_decode(file_get_contents("./state.json"), true)["helping"];
 
-$webhookurl = "https://discordapp.com/api/webhooks/656608504072634378/RY4yN4F7DbnXyuSyZiU9MiY8Ip9tyw7oqnKBvTeQltIsYNtJ6aAeuBykSUyNTWMDioLs";
+$webhookurl = "";
 if ($_GET["start"] == "true" && !$helping) {
     $msg = ">>> Hey @everyone ! Help et support dispo en **code/informatique** ! ";
     file_put_contents("./state.json", json_encode(Array("helping" => true)));
